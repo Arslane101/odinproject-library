@@ -1,0 +1,24 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+#card {
+    aspect-ratio: 1/1;
+    box-sizing: border-box;
+    border: solid 2px gray;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 15px ; 
+    padding: 20px;
+}
+
+#info {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+#library {
+    display: flex;
+}

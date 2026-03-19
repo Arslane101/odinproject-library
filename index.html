@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button command="show-modal" popovertarget="book-form">Open dialog</button>
+    <dialog popover id="book-form">
+    <form>
+     <div id="inputs">
+    <div id="input">
+    <label for="title">Title</label>
+    <input type="text" name="title" id="title" >
+    </div>
+    <div id="input">
+    <label for="author">Author</label>
+    <input type="text" name="author" id="author" >
+    </div>
+    <div id="input">
+    <label for="pages">Pages</label>
+    <input type="number" name="pages" id="pages" >
+    </div>
+    <div id="input">
+        <label for="status">Status ?</label>
+        <input type="text" name="status" id="status">
+    </div>
+    </div>
+    <button popovertarget="book-form" command="Submit" type="submit" id="submit-form">Submit</button>
+    </form>
+     <button popovertarget="book-form" command="close">Close</button>
+    </dialog>
+    <div id="library">
+    </div>
+    
+</body>
+</html>
