@@ -29,10 +29,14 @@ function preventSubmission(event){
   let card = document.createElement("div")
   let info = document.createElement("p")
   let button = document.createElement("button")
+  let hiddenbutton= document.createElement("button")
+  hiddenbutton.textContent = "Mark as Read"
+  hiddenbutton.dataset.columns = i 
   button.type= "submit"
   button.dataset.columns = i 
   button.textContent = "Delete"
   card.appendChild(button)
+  card.appendChild(hiddenbutton)
   button.hidden = true
   info.id= i 
   card.id = "card"
@@ -45,6 +49,12 @@ function preventSubmission(event){
   })
   card.addEventListener("mouseleave", () => {
     button.hidden = true
+  })
+  hiddenbutton.addEventListener("click",() => {
+    hiddenbutton.disabled = true
+    hiddenbutton.style.backgroundColor="#00FF00" 
+
+
   })
   button.addEventListener("click",() => {
             let child = document.querySelector("[data-columns="+"book"+button.dataset.columns+"]")

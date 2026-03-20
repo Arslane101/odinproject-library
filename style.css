@@ -22,3 +22,9 @@ body {
 #library {
     display: flex;
 }
+
+button {
+    border: none;
+    border-radius:  15px;
+    
+}
