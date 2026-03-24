@@ -1,14 +1,17 @@
 const myLibrary = []
 
-function Book(title,author,pages,read){
-  this.id = crypto.randomUUID()
-  this.title = title
-  this.author = author
-  this.pages= pages
-  this.read = read
-  this.info = function (){
-    return `${this.title}, ${this.author}, ${this.pages}, ${this.read}`
+class Book{
+  constructor (title,author,pages,read) {
+    this.id = crypto.randomUUID()
+    this.title = title
+    this.author = author
+    this.pages= pages
+    this.read = read
+    this.info = function (){
+      return `${this.title}, ${this.author}, ${this.pages}, ${this.read}`
+    }
   }
+  
 }
 function addtoLibrary(formData){ 
   const values = Array.from(formData.values())
@@ -64,5 +67,5 @@ function preventSubmission(event){
   i+=1
 }
 submit.addEventListener("click",preventSubmission) 
-page.style.flex = "1 1 calc(100% /"+ myLibrary.length 
+page.style.flex = "1 1 calc(100% /"+ myLibrary.length + ")"
 
